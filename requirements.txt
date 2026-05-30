@@ -12,8 +12,6 @@ scikit-learn>=1.3.0
 scipy>=1.11.0
 joblib>=1.3.0
 
-# Forecasting (dashboard uses these for demo fits)
-prophet>=1.1.4
 
 # Dashboard
 streamlit>=1.28.0
