@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Data — raw CSVs and processed Parquet (too large for git)
+data/raw/
+data/processed/
+
+# Artifacts — trained models and MLflow runs
+artifacts/forecast_store.db
+artifacts/models/
+artifacts/mlruns/
+artifacts/*.db
+
+# Airflow
+airflow_home/
+airflow.cfg
+airflow.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+*.coveragerc
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+.AppleDouble
+
+# Environment files
+.env
+*.env
+
+# Logs
+*.log
+logs/
