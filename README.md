@@ -22,7 +22,7 @@ The system is designed to run without any dataset — it ships with a synthetic 
 
 ## Live Dashboard
 
-> **[Open Dashboard](https://ac265640-forecastengine.streamlit.app)**
+> **[Open Dashboard] (https://ac265640-forecastengine.streamlit.app)**
 
 The dashboard runs  in **Interactive Demo Mode** by default (no dataset required). Load the M5 data locally and run the pipeline to switch to production mode with real model forecasts.
 
