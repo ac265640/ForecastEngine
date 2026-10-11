@@ -28,6 +28,22 @@ The dashboard runs  in **Interactive Demo Mode** by default (no dataset required
 
 ---
 
+## Demo Video
+
+[![ForecastEngine demo video: click to watch](https://ac265640.github.io/ForecastEngine/demo/poster.jpg)](https://ac265640.github.io/ForecastEngine/)
+
+▶️ **[Watch the 33-second demo](https://ac265640.github.io/ForecastEngine/)** (plays in your browser, 1080p with sound). It walks through all five tabs in **Interactive Demo Mode** (synthetic data, labelled on screen):
+
+| Time | Tab |
+|---|---|
+| 0:07 | **EDA Explorer**: switch series and see the sales, trend, seasonality and residual decomposition |
+| 0:11 | **Forecast Comparison**: SARIMA, Prophet and LSTM forecasts side by side, with the horizon slider |
+| 0:15 | **Model Deep Dive**: LSTM training curves and predictions |
+| 0:19 | **Business Impact**: raising stockout cost from $8 to $12 moves the newsvendor optimal orders (LSTM 570 → 588 units) |
+| 0:24 | **Monitoring View**: rolling-MASE drift alerts and the model health summary |
+
+---
+
 ## Architecture
 
 ```
