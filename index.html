@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ForecastEngine Demo</title>
+<meta name="description" content="ForecastEngine: SARIMA, Prophet and LSTM retail demand forecasts turned into stock decisions. 33-second demo (Interactive Demo Mode, synthetic data).">
+<meta property="og:title" content="ForecastEngine Demo">
+<meta property="og:description" content="Forecast it. Then stock it.">
+<meta property="og:image" content="https://ac265640.github.io/ForecastEngine/demo/poster.jpg">
+<meta property="og:video" content="https://ac265640.github.io/ForecastEngine/demo/forecastengine-demo.mp4">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#e8ecf4; --muted:#8b94a8; --accent:#60a5fa; --em:#a78bfa; --bg:#0b0f19; --line:#1e293b }
+  * { box-sizing:border-box; margin:0 }
+  body { background:radial-gradient(1000px 600px at 50% 110%, rgba(96,165,250,.2), transparent 65%), var(--bg);
+         color:var(--ink); font-family:Outfit,system-ui,sans-serif; min-height:100vh;
+         display:flex; flex-direction:column; align-items:center; padding:40px 16px }
+  header { text-align:center; margin-bottom:28px }
+  h1 { font-family:Outfit,sans-serif; font-weight:700; font-size:clamp(36px,5vw,56px); letter-spacing:-.04em }
+  h1 span, header p b { color:var(--em) }
+  header p { color:var(--muted); margin-top:8px; font-size:18px }
+  header p b { font-weight:500 }
+  .player { position:relative; width:min(1100px,100%); border-radius:18px; overflow:hidden; background:#000;
+            box-shadow:0 0 0 1px var(--line), 0 30px 90px -30px rgba(96,165,250,.5) }
+  video { display:block; width:100%; height:auto; aspect-ratio:16/9 }
+  #sound { position:absolute; right:16px; bottom:64px; border:0; cursor:pointer; font:500 15px Outfit,sans-serif;
+           color:#fff; background:var(--accent); padding:10px 16px; border-radius:999px }
+  .links { margin-top:24px; display:flex; gap:12px; flex-wrap:wrap; justify-content:center }
+  .links a { color:var(--ink); text-decoration:none; font:500 14px 'JetBrains Mono',monospace; padding:10px 18px; border-radius:999px;
+             background:#0f172a; box-shadow:0 0 0 1px var(--line) }
+  .links a.primary { background:var(--accent); color:#fff; box-shadow:none }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Forecast<span>Engine</span></h1>
+    <p>Retail demand forecasting, <b>start to stock</b>.</p>
+  </header>
+
+  <div class="player">
+    <video id="v" src="demo/forecastengine-demo.mp4" poster="demo/poster.jpg" controls autoplay muted playsinline preload="auto"></video>
+    <button id="sound" type="button">🔊 Tap for sound</button>
+  </div>
+
+  <div class="links">
+    <a class="primary" href="https://github.com/ac265640/ForecastEngine">View the code</a>
+    <a href="demo/forecastengine-demo.mp4" download>Download MP4</a>
+  </div>
+
+<script>
+  const v = document.getElementById('v'), b = document.getElementById('sound');
+  const hide = () => { if (!v.muted) b.style.display = 'none'; };
+  b.onclick = () => { v.muted = false; v.currentTime = 0; v.play(); hide(); };
+  v.addEventListener('volumechange', hide);
+</script>
+</body>
+</html>
