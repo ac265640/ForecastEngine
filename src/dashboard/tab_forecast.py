@@ -138,7 +138,7 @@ def render(
         xaxis=dict(gridcolor="#334155"),
         yaxis=dict(gridcolor="#334155", title="Weekly Sales"),
     )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
     # ── Metrics table ─────────────────────────────────────────────────────────
     st.subheader(f"Metrics at {horizon}-week Horizon")

@@ -81,7 +81,7 @@ forecasting/
 ├── scripts/
 │   └── run_pipeline.py           # End-to-end runner
 ├── requirements.txt
-└── environment.yml
+└── environment-dev.yml   # full local conda env (kept out of the Cloud build)
 ```
 
 ---
@@ -134,7 +134,7 @@ pip install -r requirements.txt
 
 **Option B — conda:**
 ```bash
-conda env create -f environment.yml
+conda env create -f environment-dev.yml
 conda activate forecastengine
 ```
 

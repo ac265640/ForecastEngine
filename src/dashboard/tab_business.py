@@ -166,7 +166,7 @@ def render(results_df: pd.DataFrame = None, weekly_df: pd.DataFrame = None):
         yaxis=dict(title="Expected Weekly Cost ($)", gridcolor="#334155"),
         xaxis=dict(title="Model"),
     )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
     # ── Formula explanation ────────────────────────────────────────────────────
     with st.expander("Newsvendor Formula Details"):

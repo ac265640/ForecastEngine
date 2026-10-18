@@ -147,7 +147,7 @@ def _render_sarima(sales: pd.Series, series_id: str, sarima_model=None):
             xaxis=dict(title="Lag", gridcolor="#334155"),
             yaxis=dict(title="ACF", gridcolor="#334155"),
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
     except Exception as e:
         st.warning(f"ACF plot unavailable: {e}")
 
@@ -223,7 +223,7 @@ def _render_prophet(
     )
     fig.update_xaxes(gridcolor="#334155")
     fig.update_yaxes(gridcolor="#334155")
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
 
 # ── LSTM ───────────────────────────────────────────────────────────────────────
@@ -276,7 +276,7 @@ def _render_lstm(sales: pd.Series, series_id: str, lstm_model=None):
             yaxis=dict(title="MSE Loss", gridcolor="#334155"),
             legend=dict(orientation="h", y=-0.15),
         )
-        st.plotly_chart(fig_loss, use_container_width=True)
+        st.plotly_chart(fig_loss, width="stretch")
 
     # Predicted vs Actual scatter
     with col2:
@@ -305,7 +305,7 @@ def _render_lstm(sales: pd.Series, series_id: str, lstm_model=None):
             xaxis=dict(title="Actual", gridcolor="#334155"),
             yaxis=dict(title="Predicted", gridcolor="#334155"),
         )
-        st.plotly_chart(fig_scatter, use_container_width=True)
+        st.plotly_chart(fig_scatter, width="stretch")
 
 
 # ── Helpers ────────────────────────────────────────────────────────────────────

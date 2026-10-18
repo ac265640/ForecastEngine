@@ -164,7 +164,7 @@ def render(weekly_df: pd.DataFrame, calendar_df: pd.DataFrame):
         fig.update_xaxes(gridcolor="#334155", showgrid=True)
         fig.update_yaxes(gridcolor="#334155", showgrid=True)
 
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
         # ── Anomaly summary table ─────────────────────────────────────────────
         anomalies_only = anomaly_df[anomaly_df["is_anomaly"]]
@@ -196,4 +196,4 @@ def _fallback_chart(sales: pd.Series):
         height=380,
         title="Weekly Sales",
     )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")

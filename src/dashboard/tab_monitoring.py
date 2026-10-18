@@ -114,7 +114,7 @@ def render(weekly_df: pd.DataFrame, forecast_store=None, results_df: pd.DataFram
     fig.update_yaxes(title_text="MASE", row=1, col=1)
     fig.update_yaxes(title_text="ME (units)", row=2, col=1)
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
     st.divider()
 
